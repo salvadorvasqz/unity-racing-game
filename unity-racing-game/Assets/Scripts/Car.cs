@@ -22,6 +22,7 @@ public class Car : MonoBehaviour
         if (other.tag == "Checkpoint" && gameControl.checkpoints.Count > 0)
         {
             //Remove current checkpoint
+            gameControl.checkpoints[0].SetActive(false);
             gameControl.checkpoints.RemoveAt(0);
             //Has more checkpoints
             if (gameControl.checkpoints.Count > 0)
